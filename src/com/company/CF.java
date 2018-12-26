@@ -16,7 +16,12 @@ public class CF {
     {
         if(denominator == 0)
         {
-            return 0;
+            return -1;
+        }
+        else if(numerator == 0)
+        {
+            System.out.println("Continued Fraction is not valid!");
+            return -2;
         }
         int remainder = denominator % numerator;
         quotient = (int)(denominator/numerator);
