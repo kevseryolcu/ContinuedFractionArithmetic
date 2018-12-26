@@ -20,7 +20,7 @@ public class CF {
         }
         else if(numerator == 0)
         {
-            System.out.println("Continued Fraction is not valid!");
+            //System.out.println("Continued Fraction is not valid!");
             return -2;
         }
         int remainder = denominator % numerator;
@@ -28,5 +28,15 @@ public class CF {
         denominator = numerator;
         numerator = remainder;
         return quotient;
+    }
+
+    public void print()
+    {
+        int i = this.next();
+        while(i >= 0)
+        {
+            System.out.println(i);
+            i = this.next();
+        }
     }
 }
