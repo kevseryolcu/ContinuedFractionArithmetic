@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class CF_Arithmetic {
     private int a, b, c, d, e, f, g, h;
     private CF x, y;
@@ -21,6 +23,7 @@ public class CF_Arithmetic {
         f = 0;
         g = 0;
         h = 0;
+        return calculate(x, y);
     }
     public CF sub(CF x, CF y)
     {
@@ -32,6 +35,7 @@ public class CF_Arithmetic {
         f = 0;
         g = 0;
         h = 0;
+        return calculate(x, y);
     }
     public CF mul(CF x, CF y)
     {
@@ -43,6 +47,7 @@ public class CF_Arithmetic {
         f = 0;
         g = 0;
         h = 0;
+        return calculate(x, y);
     }
     public CF div(CF x, CF y)
     {
@@ -54,19 +59,49 @@ public class CF_Arithmetic {
         f = 0;
         g = 1;
         h = 0;
+        return calculate(x, y);
     }
     private CF calculate(CF x, CF y)
     {
         int next;
-        while ((next = x.next()) != 0)
+        //while ((next = x.next()) != 0)
+        ArrayList<Integer> nCF = new ArrayList<Integer>();
+
+
+
+        for(int i = 0; i < 7; i++)
         {
             if (checkOutput())
             {
-                //output();
+                output(a/b);
+                nCF.add(a/b);
+            }
+            else if(checkInput())
+            {
+                inputX(x.next());
+            }
+            else
+            {
+                inputY(y.next());
             }
         }
+        for (int i = 0; i < nCF.size(); ++i) {
+            System.out.println(nCF.get(i));
+        }
+        return null;//dummy
     }
+    public CF calculateCF(ArrayList<Integer> nCF)
+    {
+        if(nCF == null)
+        {
+            return null;
+        }
+        /*for (i:
+             nCF) {
 
+        }*/
+        return null;
+    }
     //returns true if input X, false otherwise
     public boolean checkInput()
     {
@@ -75,6 +110,14 @@ public class CF_Arithmetic {
             return false;
         }
         else if (this.f == 0 && this.g == 0)
+        {
+            return false;
+        }
+        else if(this.f == 0 && this.g != 0)
+        {
+            return true;
+        }
+        else if (this.f != 0 && this.g == 0)
         {
             return false;
         }
