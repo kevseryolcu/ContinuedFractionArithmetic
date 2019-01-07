@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         CF x = new CF(13, 11);
-        CF y = new CF(3, 2);
+        CF y = new CF(1, 2);
 
         //System.out.println("x:");
         //x.print();

@@ -69,7 +69,7 @@ public class CF_Arithmetic {
 
 
 
-        for(int i = 0; i < 100; i++)
+        for(int i = 0; i < 7; i++)
         {
             if (checkOutput())
             {
@@ -77,7 +77,6 @@ public class CF_Arithmetic {
                 nCF.add(a/b);
             }
             else if(checkInput())
-
             {
                 inputX(x.next());
             }
