@@ -41,7 +41,7 @@ public class CFArithmeticsApp {
         System.out.println("Results:");
         System.out.println("continued fraction: " + DisplayUtil.writeListNotation(cf.iterator()));
         System.out.println("fraction: " + CFTransformUtil.toFraction(cf.iterator()));
-        System.out.println("decimal: " + CFTransformUtil.toDouble(cf.iterator()));
+        //System.out.println("decimal: " + CFTransformUtil.toDouble(cf.iterator()));
     }
 
     private static ContinuedFractionNumber getOperationType(long firstNumerator, long firstDenominator, long secondNumerator, long secondDenominator) {
@@ -51,8 +51,8 @@ public class CFArithmeticsApp {
         ContinuedFractionNumber cf = null;
         FractionTermIterator firstFractionTermIterator = new FractionTermIterator(new FractionNumber(firstNumerator, firstDenominator));
         FractionTermIterator secondFractionTermIterator = new FractionTermIterator(new FractionNumber(secondNumerator, secondDenominator));
-        System.out.println("First CF" + DisplayUtil.writeListNotation(firstFractionTermIterator));
-        System.out.println("Second CF" + DisplayUtil.writeListNotation(secondFractionTermIterator));
+        //System.out.println("First CF" + DisplayUtil.writeListNotation(firstFractionTermIterator));
+        //System.out.println("Second CF" + DisplayUtil.writeListNotation(secondFractionTermIterator));
         switch (operationType) {
             case "add":
                 cf = new ContinuedFractionNumber(GosperTermIterator.add(firstFractionTermIterator, secondFractionTermIterator));
